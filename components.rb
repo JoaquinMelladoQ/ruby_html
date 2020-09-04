@@ -16,6 +16,18 @@ def head
         <body>'
 end
 
+def buttons( array )
+    buttons = ''
+    colors = ['primary', 'success', 'danger', 'info', 'secondary', 'warning']
+    array.each do | name |
+        num_color = rand(0..5)
+        buttons += "<button type='button' class='btn btn-#{colors[num_color]}'>#{name}</button>"
+    end
+    return buttons
+end
+
+
+
 def foot
         '<!--JQuery-->
         <script src='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
