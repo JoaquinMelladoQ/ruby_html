@@ -1,5 +1,5 @@
 def head
-    '<!DOCTYPE html>
+    "<!DOCTYPE html>
     <html lang='en'>
         <head>
             <meta charset='UTF-8'>
@@ -13,15 +13,15 @@ def head
             <!--Mi Estilo-->
             <link rel='stylesheet' href='./assets/css/style.css'>
         </head>
-        <body>'
+        <body>"
 end
 
 def buttons( array )
     buttons = ''
     colors = ['primary', 'success', 'danger', 'info', 'secondary', 'warning']
     array.each do | name |
-        num_color = rand(0..5)
-        buttons += "<button type='button' class='btn btn-#{colors[num_color]}'>#{name}</button>"
+        # num_color = rand(0..5)
+        buttons += "<button type='button' class='btn btn-#{colors.sample}'>#{name}</button>"
     end
     return buttons
 end
@@ -29,12 +29,12 @@ end
 
 
 def foot
-        '<!--JQuery-->
+        "<!--JQuery-->
         <script src='https://code.jquery.com/jquery-3.5.1.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous'></script>
         <!--PopperJS-->
         <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
         <!--BootstrapJS-->
         <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js' integrity='sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI' crossorigin='anonymous'></script>
     </body>
-    </html>'
+    </html>"
 end
